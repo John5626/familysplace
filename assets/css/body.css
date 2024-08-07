@@ -1,0 +1,13 @@
+body {
+    font-family: 'gothic', sans-serif;
+    background-color: var(--background-color);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho dos elementos */
+}

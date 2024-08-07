@@ -1,0 +1,191 @@
+@import url("fonts.css");
+@import url("header.css");
+@import url("body.css");
+@import url("footer.css");
+@import url("root.css");
+
+/*Preencher completamente o navegador*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%; /* O contêiner do carrossel deve ocupar toda a largura necessária */
+    height: var(--carousel-height);
+    overflow: hidden;
+}
+
+.carousel-image-container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity var(--carousel-transition-duration) ease-in-out;
+    opacity: var(--carousel-image-opacity); /* Começa oculta */
+    z-index: 0; /* z-index inicial */
+    transform: var(--carousel-transform);
+}
+
+.carousel-image-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Somente a imagem ativa deve ser mostrada */
+.carousel-image-container.active {
+    opacity: 1;
+    z-index: var(--carousel-active-z-index); /* Garante que a imagem ativa fique acima das outras */
+}
+
+/* Imagens não ativas devem ser ocultadas */
+.carousel-image-container:not(.active) {
+    opacity: var(--carousel-image-opacity);
+    z-index: var(--carousel-inactive-z-index);
+}
+
+.secao1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-size);
+    padding: var(--padding-size);
+    background-color: var(--background-color);
+}
+
+.hashtag-section {
+    text-align: center; /* Garante o alinhamento central do texto */
+    width: 100%; /* A seção ocupa toda a largura disponível */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo para separação visual */
+}
+
+.hashtag-section h1 {
+    font-size: calc(24px + 1vw); /* Tamanho dinâmico baseado na largura da tela */
+    color: var(--text-color); /* Cor do texto, ajustável conforme o design */
+    font-family: 'riverola', sans-serif; /* Assegura que a fonte seja consistente */
+}
+
+.hashtag-section strong {
+    color: var(--highlight-color); /* Cor de destaque para o termo hashtag */
+    font-family: 'mountains', sans-serif; /* Garante que a fonte destacada seja consistente */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se ajustem e envolvam conforme necessário */
+    justify-content: center; /* Centraliza os cartões horizontalmente */
+    padding: var(--padding-size);
+    width: 100%; /* Garante que o container ocupe a largura total */
+}
+
+.card {
+    flex: 1 1 var(--card-flex-basis); /* Cresce e encolhe a partir de 250px, mantendo flexibilidade */
+    margin: var(--card-margin);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-box-shadow);
+    max-width: 30dvh;
+}
+
+.card img {
+    width: 100%;
+    height: 100%; /* Altura automática para manter as proporções */
+    object-fit: cover;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 0;
+    background-color: var(--card-text-bg-color);
+    color: var(--card-text-color);
+    margin-top: auto; /* Empurra o texto para baixo dentro do cartão */
+}
+
+
+.container {
+    /*margin-left: 10dvh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.delivery__container {
+    display: flex;
+    justify-content: center; /* Muda para 'center' para centralizar os itens */
+    flex-wrap: wrap;
+    gap: 2dvh;
+    width: 100%;
+    margin: 0 auto; /* Ajuda na centralização horizontal */
+}
+
+.delivery__box {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    max-width: 40dvh;
+
+}
+
+.delivery__box:hover {
+    transform: translateY(-5px);
+}
+
+.delivery__content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fundo com leve transparência */
+    border-radius: 8px;
+}
+
+.delivery__button {
+    background-color: var(--highlight-color);
+    color: #000;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .delivery__container {
+        flex-direction: column;
+    }
+
+    .container{
+        padding: 10px;
+    }
+    .delivery__box {
+        width: 100%; /* Ajustado para '100%' para melhor aproveitamento do espaço em telas pequenas */
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+p, small, h2 {
+    color: var(--card-text-color);
+    text-decoration: none;
+}
+
+
+
+
+
+

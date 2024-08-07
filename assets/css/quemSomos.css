@@ -1,0 +1,126 @@
+@import url("fonts.css");
+@import url("header.css");
+@import url("body.css");
+@import url("footer.css");
+
+main {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.titulo-content {
+    top: -1.6dvh;
+    position: relative; /* para o posicionamento do pseudo-elemento */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--highlight-color);
+
+}
+
+.titulo-content::before {
+    content: ''; /* Necessário para que o pseudo-elemento seja gerado */
+    position: absolute; /* Posiciona absolutamente dentro do elemento pai */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Cor preta com 50% de opacidade */
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+
+.titulo-content h1 {
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+h1, h2 {
+    font-weight: bold; /* Fonte mais leve para um look moderno */
+    margin-bottom: 1dvh; /* Espaço após títulos para separação clara de seções */
+    color: #A67E4E;
+    font-family: 'Century Gothic', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2dvh;
+}
+
+/* Estilos de texto para melhor legibilidade */
+.sobre-nos p, .missao-visao-valores p, .nossa-equipe p, .nossa-equipe ul {
+    text-align: justify;
+    line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
+    font-size: 16px; /* Tamanho de fonte maior para fácil leitura */
+}
+
+/* Seção da equipe */
+.nossa-equipe {
+    text-align: center;
+    padding: 40px;
+    border-radius: 8px; /* Consistência com o design do container principal */
+    height: auto;
+}
+
+.membros-equipe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Usa 'gap' para espaçamento consistente */
+}
+
+.membro {
+    width: calc(33.333% - 20px); /* Ajuste para três colunas com 'gap' */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px; /* Bordas arredondadas para os cards */
+    transition: transform 0.3s; /* Transição suave para efeito hover */
+}
+
+.membro:hover {
+    transform: translateY(-5px); /* Efeito hover sutil para destacar cards */
+}
+
+.membro img {
+    width: 80%; /* Reduz a largura para não ocupar todo o card */
+    margin: 0 auto; /* Centraliza a imagem */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para destacar a imagem */
+}
+
+.membro h3 {
+    color: #333;
+    margin: 10px 0 5px; /* Ajusta as margens para título */
+}
+
+.membro p {
+    color: #666;
+}
+
+.membro a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px; /* Espaço antes do link */
+}
+
+.membro a:hover {
+    text-decoration: underline; /* Efeito de hover para link */
+}
+
+/* Ajustes responsivos para melhor visualização em dispositivos móveis */
+@media (max-width: 768px) {
+    .membros-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membro {
+        width: 100%; /* Ajuste para telas menores para evitar vazamento */
+        padding: 15px; /* Redução do padding em telas menores */
+        margin-bottom: 15px; /* Redução da margem inferior para compactar o layout */
+    }
+}

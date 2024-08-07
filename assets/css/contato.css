@@ -1,0 +1,144 @@
+@import url("fonts.css");
+@import url("header.css");
+@import url("body.css");
+@import url("footer.css");
+@import url("menu.css");
+@import url("root.css");
+
+main {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+    height: 80dvh;
+
+}
+
+.titulo-content {
+    top: -1.6dvh;
+    position: relative; /* para o posicionamento do pseudo-elemento */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--highlight-color);
+}
+
+.titulo-content::before {
+    content: ''; /* Necessário para que o pseudo-elemento seja gerado */
+    position: absolute; /* Posiciona absolutamente dentro do elemento pai */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Cor preta com 50% de opacidade */
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+
+.titulo-content h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: #79683e;
+}
+
+
+#trabalhe-conosco, #contato{
+    margin-top: 2dvh;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type=text], input[type=email],
+input[type=date], input[type=number],
+input[type=submit], input[type=telefone] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid; /* Bordas mais definidas */
+    border-radius: 20px; /* Bordas arredondadas nos inputs */
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; /* Suaviza as transições nos inputs */
+}
+
+input[type=file] {
+    width: 50%;
+
+    transition: all 0.3s ease-in-out; /* Suaviza as transições nos inputs */
+    cursor: pointer; /* Mostra o cursor de pointer */
+    color: #555; /* Cor do texto */
+}
+
+input[type=file]::file-selector-button {
+    background-color: var(--highlight-color); /* Cor do fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 20px; /* Bordas arredondadas no botão */
+    padding: 12px 20px; /* Espaçamento dentro do botão */
+    margin-right: 10px; /* Espaçamento à direita do botão */
+    transition: background-color 0.3s ease-in-out; /* Suaviza a transição da cor de fundo */
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #79683e; /* Cor de fundo ao passar o mouse */
+}
+
+
+input[type=submit] {
+    background-color: var(--highlight-color); /* Cor de destaque para o botão de envio */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4D3C1CFF; /* Cor mais escura para hover no botão de envio */
+    transform: translateY(-5px); /* Efeito de escala ao passar o mouse */
+}
+
+.contact-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .titulo-content h1 {
+        font-size: 24px;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr; /* Ajusta para uma coluna em telas pequenas */
+    }
+
+    input[type=file] {
+        width: 100%;
+    }
+}

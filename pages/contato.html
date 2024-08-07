@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family's Place - Contato</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo/logobranca.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/contato.css">
+    <script type="text/javascript" src="../js/hambuguerMenu.js"></script>
+    <script type="text/javascript" src="../js/formsContato.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html" class="link-principal">
+                <img src="../assets/images/logo/logobranca.png" class="logo" alt="logofamilysplace">
+            </a>
+        </div>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Ícone do Font Awesome -->
+        </div>
+        <nav class="nav-menu">
+            <a href="../pages/quemSomos.html">QUEM SOMOS</a>
+            <a href="../pages/menu.html">CARDÁPIO</a>
+            <a href="../pages/eventos.html">EVENTOS</a>
+            <a href="../pages/contato.html">CONTATO</a>
+            <a href="https://www.webleva.com/m/cardapio?Xcon=MzQwOQ==" class="pedido-link">FAÇA SEU PEDIDO</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="titulo-content" style="background-image: url('../assets/images/backgroud.png')">
+            <h1>Contato</h1>
+        </div>
+
+        <div class="contact-info">
+            <h2>Dúvidas, críticas ou sugestões, entre em contato conosco.</h2>
+            <p>Para reservas, acesse a página Reservas e selecione o tipo de reserva de sua escolha.</p>
+        </div>
+
+
+        <div class="buttons-contact">
+            <button id="sacButton">SAC</button>
+            <button id="trabalheButton">Trabalhe Conosco</button>
+        </div>
+
+        <div id="contato" class="contato">
+            <div class="form-content">
+                <form id="contactForm">
+                    <div class="contact-row">
+                        <div class="contact-camp">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="contact-camp">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-camp">
+                        <label for="telefone">Telefone:</label>
+                        <input type="number" id="telefone" name="telefone" required>
+                        </div>
+
+                        <div class="contact-camp">
+                            <label for="assunto">Assunto:</label>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </div>
+                    </div>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <input type="text" id="mensagem" name="mensagem" required>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+
+        <div id="trabalhe-conosco" class="trabalhe-conosco hidden">
+            <div class="form-content">
+                <form id="jobForm">
+                    <input type="hidden" id="eventTypeInput" name="eventType">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="number" id="telefone" name="telefone" required>
+
+
+                        <label for="curriculo">Currículo (.pdf):</label>
+                        <input type="file" id="curriculo" name="curriculo" required>
+
+
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="redes-sociais">
+          <a href="https://api.whatsapp.com/send/?phone=%2B553398227959&text&type=phone_number&app_absent=0" target="_blank">
+            <i class="fab fa-whatsapp"></i> Whatsapp
+          </a>
+          <a href="https://www.instagram.com/familysplace/" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+        <div class="nome-empresa">
+          &copy; 2024 Family's Place
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

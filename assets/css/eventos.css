@@ -1,0 +1,177 @@
+@import url("fonts.css");
+@import url("header.css");
+@import url("body.css");
+@import url("footer.css");
+@import url("root.css");
+
+
+main {
+    width: 85%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.titulo-content {
+    top: -1.6dvh;
+    position: relative; /* para o posicionamento do pseudo-elemento */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--highlight-color);
+}
+
+.titulo-content::before {
+    content: ''; /* Necessário para que o pseudo-elemento seja gerado */
+    position: absolute; /* Posiciona absolutamente dentro do elemento pai */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* Cor preta com 50% de opacidade */
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+
+.titulo-content h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.event-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex; /* Define a seção como um container Flex */
+
+
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+.text-content {
+    width: 50%;
+    padding-right: 20px; /* Espaço entre o texto e a imagem */
+    text-align: justify;
+    margin-left: 2dvh;
+    h1{
+        text-transform: uppercase;
+    }
+
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; /* Ajustar o z-index para garantir que o modal fique acima de outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurecer um pouco mais o fundo */
+    backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque ao fundo */
+}
+
+.modal h2 {
+    margin-bottom: 2dvh;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Ajuste na margem para centralizar mais o modal */
+    padding: 40px; /* Aumento do padding para mais espaço interno */
+    max-width: 60dvh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para mais profundidade */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição de entrada */
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Garante que o cursor indique a ação */
+}
+
+.close:hover,
+.close:focus {
+    color: #ce4141; /* Cor mais escura para hover/focus */
+    text-decoration: none;
+}
+
+input[type=text], input[type=email],
+input[type=date], input[type=number],
+input[type=submit], input[type=telefone],
+select[id=almoco-jantar] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid; /* Bordas mais definidas */
+    border-radius: 4px; /* Bordas arredondadas nos inputs */
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out; /* Suaviza as transições nos inputs */
+}
+
+input[type=submit] {
+    background-color: var(--highlight-color); /* Cor de destaque para o botão de envio */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #4D3C1CFF; /* Cor mais escura para hover no botão de envio */
+    transform: translateY(-5px); /* Efeito de escala ao passar o mouse */
+}
+
+
+@media (max-width: 768px) { /* Para telas menores que 768px */
+    .content-wrapper{
+        flex-direction: column;
+    }
+    .text-content {
+        order: -1; /* Coloca o texto sempre no início */
+        width: 100%; /* Faz o texto ocupar a largura total */
+        padding-right: 0; /* Remove o padding quando não necessário */
+        margin-left: 0; /* Ajusta a margem para dispositivos menores */
+    }
+
+    .image-content {
+        width: 100%; /* Faz a imagem ocupar a largura total */
+    }
+
+    button{
+        margin-bottom: 2dvh;
+    }
+}

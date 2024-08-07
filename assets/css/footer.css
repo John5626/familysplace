@@ -1,0 +1,43 @@
+@import url("fonts.css");
+
+footer {
+  background-color: #D9BD9C;
+  font-weight: bold;
+  color: black;
+  padding: 5dvh;
+  text-align: center;
+  align-items: center;
+
+  
+}
+
+.redes-sociais a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 10px;
+
+  display: inline-flex; /* Adiciona flex para alinhar ícones e texto */
+  align-items: center; /* Alinha verticalmente o ícone com o texto */
+}
+
+.redes-sociais a i {
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.nome-empresa {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.developer{
+  text-align: right;
+  font-size: 18px;
+}
+
+.devs{
+  color: #9e8149;
+  font-style: oblique;
+}
+
+

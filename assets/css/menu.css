@@ -1,0 +1,80 @@
+@import url("footer.css");
+@import url("fonts.css");
+
+.cardapio{
+    columns: 2; /* Define o número de colunas */
+    padding: 8dvh;
+    column-fill: auto; /*Define automaticamente a altura da minha coluna*/   
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+    width: 100%; /* Garante que o contêiner ocupa a largura total */
+    height: 110vh; /* Define a altura como 100% da altura da viewport */
+    column-span: all;/* Permite rolagem vertical se o conteúdo exceder a altura */
+    border-style: outset;
+    overflow-y: auto;
+}
+
+.tiposComidas h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'riverola';
+    
+    
+    font-weight: 400; /* tira o negrito */
+    
+}
+
+.comidas h3{
+    text-align: center;
+    font-family: 'Century';
+    padding-top: 6dvh;
+    margin-left: 23dvh;
+    margin-right: 23dvh;
+    font-weight: 700;
+}
+
+.comidas h2{
+    text-align: center;
+    
+    font-family: 'riverola';
+    font-size: 3dvh;
+    font-weight: 400;
+    padding-top: 2dvh;
+    margin: auto;
+}
+
+.comidas p{
+    
+    text-align: justify;      
+    font-family: 'Century';
+    font-size: 22px;
+    font-weight: 700; /* coloca negrito */
+    word-break: normal;
+    margin-left: 23dvh;
+    margin-right: 23dvh;
+    
+}
+
+.titulo-chique{
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;   
+    background-image: url('/Projeto_FamilysPlace/assets/images/cardapio/nome-estilo.png');
+    background-size: cover;
+    background-position: center;    
+}
+
+@media (min-width: 767px) {
+    .cardapio h1{
+        margin:auto;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+    .comidas p{
+        color: blue;      
+    }
+    
+
+}

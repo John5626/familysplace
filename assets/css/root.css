@@ -1,0 +1,21 @@
+:root {
+    --carousel-height: 50dvh;
+    --carousel-transition-duration: 1s;
+    --carousel-transform: translateY(-20%);
+    --carousel-active-z-index: 1;
+    --carousel-inactive-z-index: -1;
+    --carousel-image-opacity: 0;
+
+    --background-color: #f2f2f2;
+    --text-color: #333;
+    --highlight-color: #af8e50;
+    --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --card-text-bg-color: #333;
+    --card-text-color: white;
+
+    --gap-size: 20px;
+    --padding-size: 20px;
+    --card-flex-basis: 250px;
+    --card-margin: 10px;
+    --border-radius: 10px;
+}
