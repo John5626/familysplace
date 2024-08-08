@@ -7,69 +7,77 @@
     <link rel="icon" type="image/png" href="../assets/images/logobranca.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/contato.css">
+    <script type="text/javascript" src="../js/hambuguerMenu.js"></script>
 </head>
 <body>
-    <header>
-        <a href="..\index.html" class="link-principal">
+  <header>
+    <div class="logo-container">
+        <a href="../index.html" class="link-principal">
             <img src="../assets/images/logo/logobranca.png" class="logo" alt="logofamilysplace">
         </a>
+    </div>
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i> <!-- Ícone do Font Awesome -->
+    </div>
+    <nav class="nav-menu">
+        <a href="../pages/quemSomos.html">QUEM SOMOS</a>
+        <a href="menu.html">CARDÁPIO</a>
+        <a href="../pages/eventos.html">EVENTOS</a>
+        <a href="../pages/contato.html">CONTATO</a>
+        <a href="https://www.webleva.com/m/cardapio?Xcon=MzQwOQ==" class="pedido-link">FAÇA SEU PEDIDO</a>
+    </nav>
+  </header>  
 
-        <nav>   
-            <a href= "quemSomos.html">QUEM SOMOS</a>
-            <a href="contato.html">CONTATO</a>
-            <a href="https://www.webleva.com/m/cardapio?Xcon=MzQwOQ==" class="pedido-link">FAÇA SEU PEDIDO</a>   
-        </nav>
-       
-    </header>
-    <div class = "cardapio">
+  <main>
+    <div class = "cardapio" style="background-image: url('../assets/images/logo/logotransparente.png');"> <!-- primeira pagina -->
       <div class= "tiposComidas">
         <h1> 
-          <span class= "titulo-chique">Apetizers</span></br>
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Apetizers</span></br>
           Aperitivos
         </h1>
       </div>
       
       <div class = "comidas">  
         
-        <h2>Fish N Chips..................................................89,00</h2>
+        <h2>Fish N Chips...........89,00</h2>
         <p>Tilápia frita servida com batata rústica e molho da casa</p>
         
-        <h2>Chicken Quesadilha..........................................38,00</h2>
+        <h2>Chicken Quesadilha...........38,00</h2>
         <p>Tortilha mexicana recheada com frango, muçarela e queijo prato. 
            Acompanha guacamole e molho marinara.</p>
 
-        <h2>Steak Quesadilha............................................45,00</h2>
+        <h2>Steak Quesadilha...........45,00</h2>
         <p>Tortilha mexicana recheada com filé mignon, muçarela e queijo prato. 
           Acompanha guacamole e molho marinara.</p>
 
-        <h2>Shrimp Quesadilha..........................................52,00</h2>
+        <h2>Shrimp Quesadilha...........52,00</h2>
         <p>Tortilha mexicana recheada com camarão, muçarela e queijo prato. 
             Acompanha guacamole e molho marinara.</p>
     
-        <h2>Barbecue Rib Quesadilha..................................44,00</h2>
+        <h2>Barbecue Rib Quesadilha...........44,00</h2>
         <p>Tortilha mexicana recheada com costela bovina, muçarela e queijo prato. 
             Acompanha guacamole e molho marinara.</p>
 
-        <h2>Barbecue Chicken............................................63,00</h2>
+        <h2>Barbecue Chicken...........63,00</h2>
         <p>Filé de frango empanado ao molho barbecue.</p>
       
-        <h2>Buffalo Chicken.............................................63,00</h2>
+        <h2>Buffalo Chicken...........63,00</h2>
         <p>Filé de frango empanado ao molho picante. Acompanha molho da casa</p>
 
-        <h2>Barbecue and Buffalo Chicken.........................63,00</h2>
+        <h2>Barbecue and Buffalo Chicken...........63,00</h2>
         <p>Filé de frango empanado ao molho barbecue e picante.</p>
       
-        <h2>Filé Mignon Com Fritas..................................94,00</h2>
+        <h2>Filé Mignon Com Fritas...........94,00</h2>
         <p>Filé mignon salteado no alho e cebola. Servido com batata rústica</p>
         
-        <h2>Chicken Snacks................................................66,00</h2>
+        <h2>Chicken Snacks...........66,00</h2>
         <p>Pesticos de frango acompanhado com molho de mostarda e mel.
           Servido com batata industrial.</p>
         
-        <h2>Batata Rústica Com Barbecue Rib.....................52,00</h2>
+        <h2>Batata Rústica Com Barbecue Rib...........52,00</h2>
         <p>Batata rústica com cream cheese e costela bovina desfiada.</p>
 
-        <h2>Rib Croquette.................................................43,00</h2>
+        <h2>Rib Croquette...........43,00</h2>
         <p>Croquete de costela desfiada com cream cheese.</p>
 
         <h3>*Em caso de alteração nos pratos será cobrado a diferença</h3>
@@ -77,75 +85,209 @@
       
     </div>
     
-    <div class = "cardapio">
+    <div class = "cardapio" style="background-image: url('../assets/images/logo/logotransparente.png');"> <!-- 2 pagina pagina -->
       <div class= "tiposComidas">
         <h1> 
-          <span class= "titulo-chique">Pastas</span></br>
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Pastas</span></br>
           Massas
         </h1>
       
-      <div class = "comidas">  
-        
-        <h2>Chicken, Brocolli and Ziti.............................84,00</h2>
-        <p>Filé de frango no cremoso molho de parmesão e brócolis. Servido com macarrão penne.</p>
-        
-        <h2>Chicken Piccata..........................................84,00</h2>
-        <p>Filé de frango ao molho de vinho branco, alcaparras, limão siciliano e alho.
-          Servido com macarrão Fettuccine
-        </p>
+        <div class = "comidas">   
+          <h2>Chicken, Brocolli and Ziti...........84,00</h2>
+          <p>Filé de frango no cremoso molho de parmesão e brócolis. Servido com macarrão penne.</p>
+          
+          <h2>Chicken Piccata...........84,00</h2>
+          <p>Filé de frango ao molho de vinho branco, alcaparras, limão siciliano e alho.
+            Servido com macarrão Fettuccine
+          </p>
 
-        <h2>Chicken Carbonara............................................89,00</h2>
-        <p>Filé de frango e bacon finalizados no molho carbonara. Servido com macarrão Fettucine.</p>
-        <p>*Acréscimo de camarão(+20,00)</p>
+          <h2>Chicken Carbonara...........89,00</h2>
+          <p>Filé de frango e bacon finalizados no molho carbonara. Servido com macarrão Fettucine.</p>
+          <p>*Acréscimo de camarão(+20,00)</p>
 
-        <h2>Filet à Carbonara..........................................154,00</h2>
-        <p>Escalopes de filé mignon regados com molho carbonara. Servido com macarrão Fettuccine
-          salteado na manteiga e alho. Finalizado com farofa e pão.
-        </p>
+          <h2>Filet à Carbonara...........154,00</h2>
+          <p>Escalopes de filé mignon regados com molho carbonara. Servido com macarrão Fettuccine
+            salteado na manteiga e alho. Finalizado com farofa e pão.
+          </p>
+        </div> 
       </div>
-      
-      </div>
+
       <div class= "tiposComidas">
         <h1> 
-          <span class= "titulo-chique">Steaks Favorites</span></br>
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Steaks Favorites</span></br>
           Carnes Favoritas
         </h1>
       
-      <div class = "comidas">  
+        <div class = "comidas">  
         
-        <h2>Steak tips.....................................................154,00</h2>
-        <p>Cubos de filé mignon salteados com cogumelhos, pimentão, cebola e tomate.
-          Finalizado com vinho Carbenet Sauvignon e molho madeira. Servido com arroz piemontese.
-        </p>
+          <h2>Filet Mignon Malbec...........154,00</h2>
+          <p>Filé mignon grelhado, finalizado com molho malbec. Servido com arroz e batata rústica.</p>
+
+          <h2>Filé Mignon Gorgonzola...........158,00</h2>
+          <p>Filé mignon grelhado, finalizado com molho gorgonzola. Servido com arroz e batata rústica.</p>
+
+          <h2>Filet Mignon With Mustard Sauce...........154,00</h2>
+          <p>Filé mignon grelhado, finalizado com molho de mostarda. Servido com arroz e batata rústica.</p>
         
-        <h2>Filet Mignon Malbec.....................................154,00</h2>
-        <p>Filé mignon grelhado, finalizado com molho malbec. Servido com arroz e batata rústica.</p>
+          <h2>Filet Mignon With Mustard Sauce...........158,00</h2>
+          <p>Filé mignon grelhado, finalizado com molho de madeira e cogumelos. Servido com risoto de gorgonzola.</p>
+          
+          <h2>Filet Mignon With Pesto Sauce...........158,00</h2>
+          <p>Filé mignon grelhado, finalizado com molho pesto. Servido com risoto de bacon.</p>
 
-        <h2>Filé Mignon Gorgonzola................................158,00</h2>
-        <p>Filé mignon grelhado, finalizado com molho gorgonzola. Servido com arroz e batata rústica.</p>
+          <h2>Steak ao Molho Jus...........154,00</h2>
+          <p>Escalopes de filé mignon ao molho de carne, arroz piemontese e bacon crocante.</p>
 
-        <h2>Filet Mignon With Mustard Sauce..................154,00</h2>
-        <p>Filé mignon grelhado, finalizado com molho de mostarda. Servido com arroz e batata rústica.</p>
-      
-        <h2>Filet Mignon With Mustard Sauce..................158,00</h2>
-        <p>Filé mignon grelhado, finalizado com molho de madeira e cogumelos. Servido com risoto de gorgonzola.</p>
-        
-        <h2>Filet Mignon With Pesto Sauce......................158,00</h2>
-        <p>Filé mignon grelhado, finalizado com molho pesto. Servido com risoto de bacon.</p>
-
-        <h2>Steak ao Molho Jus.......................................154,00</h2>
-        <p>Escalopes de filé mignon ao molho de carne, arroz piemontese e bacon crocante.</p>
-
-        <h2>Picanha........................................................158,00</h2>
-        <p>Servido com arroz, vinagrete, farofa e batata rústica.</p>
+          <h2>Picanha...........158,00</h2>
+          <p>Servido com arroz, vinagrete, farofa e batata rústica.</p>
+          <h3>*Em caso de alteração nos pratos será cobrado a diferença</h3>
+                  
+        </div>
       </div>
+    </div>
+    
+    <div class = "cardapio" style="background-image: url('../assets/images/logo/logotransparente.png');"> <!-- terceira pagina -->
+      <div class= "tiposComidas">
+        <h1> 
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Soft Drinks and Juices</span></br>
+          Refrigerantes e Sucos
+        </h1>
       
+        <div class = "comidas">   
+          <h2>Água sem gás...........4,00</h2>
+                    
+          <h2>Água com gás...........4,00</h2>
+          
+          <h2>Coca-Cola 2L...........15,00</h2>
+          
+          <h2>Guaraná 1,5L...........12,00</h2>
+
+          <h2>Refrigerante Lata...........6,00</h2>
+          <p>Fanta Laranja, Sprite, Coca-Cola, Guaraná.</p>
+
+          <h2>H20...........7,00</h2>
+          
+          <h2>Sucos Naturais</h2>
+          <h2>Abacaxi...........11,00</h2>
+          <h2>Abacaxi com hortelã...........11,00</h2>
+          <h2>Acerola...........11,00</h2>
+          <h2>Frutas Vermelhas...........14,00</h2>
+          <h2>Graviola...........11,00</h2>
+          <h2>Laranja...........11,00</h2>
+          <h2>Laranja com Morango...........18,00</h2>
+          <h2>limão...........11,00</h2> 
+          <h2>Maracujá...........11,00</h2>
+          <h2>Limonada Suíça...........13,00</h2>
+        </div> 
+      </div>
+
+      <div class= "tiposComidas">
+        <h1> 
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Beers</span></br>
+          Cervejas
+        </h1>
+      
+        <div class = "comidas">  
+          
+          <h2>Heineken 600ML...........16,00</h2>
+          
+          <h2>Baden Baden 600ML...........20,00</h2>
+
+          <h2>Brahma 600ML...........11,00</h2>
+        
+          <h2>Original 600ML...........14,00</h2>
+                    
+          <h2>Stella 600ML...........14,00</h2>
+          
+          <h2>Spaten 600ML...........14,00</h2>
+                  
+        </div>
+      </div>
+
+      <div class= "tiposComidas">
+        <h1> 
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Mocktail`s</span></br>
+          Drinks Não-Alcoólicos
+        </h1>
+      
+        <div class = "comidas">
+          
+          <h2>Soda Italiana de Maçã Verde...........16,00</h2>
+          
+          <h2>Mojito Virgin...........11,00</h2>
+          <p>Hortelã, limão e sprite.</p>
+
+          <h2>Shirley temple...........11,00</h2>
+          <p>Gengibre, grenadine e sprite.</p>
+
+          <h2>Virgin Moscow Mule...........19,00</h2>
+          <p>Xarope de gengibre, splash de limão, água com gás.</p>
+                    
+          <h2>Lagoa Azul...........19,00</h2>
+          <p>Xarope de laranja, splash de limão, sprite.</p>
+
+                  
+        </div>
       </div>
     </div>
 
-    <main>
+    <div class = "cardapio" style="background-image: url('../assets/images/logo/logotransparente.png');"> <!-- terceira pagina -->
+      <div class= "tiposComidas">
+        <h1> 
+          <span class= "title-style" style = "background-image: url('../assets/images/cardapio/nome-estilo.png');">Cocktail`s</span></br>
+          Drinks Alcoólicos
+        </h1>
+      
+        <div class = "comidas">   
+          <h2>House Favorite...........25,00</h2>
+          <p>Raspberry vodka, splash de limão, sprite.</p>
 
-    </main>
+          <h2>Tradicional Margarita...........26,00</h2>
+          <p>Tequila, licor de laranja, sour mix. Sal na borda do copo.</p>
+          
+          <h2>Red Sangra...........26,00</h2>
+          <p>Vodka, Bacardi lemon, licor de pêssego, vinho tinto, sour mix e sprite.</p>
+
+          <h2>Red Sky...........27,00</h2>
+          <p>Raspberry vodka, frutas vermelhas, sprite.</p>
+
+          <h2>Caipirinha...........21,00</h2>
+          <p>Limão, açúcar e cachaça.</p>
+
+          <h2>Caipivodka...........26,00</h2>
+          <p>Sabor: morango, maracujá ou kiwi,</p>
+          
+          <h2>Moscou Mule...........26,00</h2>
+          <p>Vodka, xarope de gengibre, splash de limão, água com gás.</p>
+
+          <h2>gin&Tonica...........26,00</h2>
+          <p>Gin, água tônica e splash de limão.</p>
+
+          <h2>Blue Sky...........27,00</h2>
+          <p>Vodka, curaçau blue, licor de pêssego e suco de abacaxi.</p>
+
+          <h2>Tradicional Mojito...........26,00</h2>
+          <p>Bacardi light, hortelã, limão e sprite.</p>
+
+          <h2>Side Car...........26,00</h2>
+          <p>Conhaque, licor de laranja, sour mix.</p>
+
+          <h2>Sex On The Beach...........26,00</h2>
+          <p>Vodka, licor de pêssego, suco de laranja e cramberry.</p>
+
+          <h2>Whisky Sour...........26,00</h2>
+          <p>Johnie Walker, Red label e sour mix. Sal na borda do copo.</p>
+
+          <h2>Cozumel</h2> 
+          <h2>Brahma...........12,00</h2>
+          <h2>Heineken...........21,00</h2>
+          <h2>Corona...........21,00</h2>
+
+        </div> 
+      </div>
+
+    </div>
+  </main>
 
     <footer>
         <div class="redes-sociais">
