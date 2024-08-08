@@ -1,80 +1,147 @@
-@import url("footer.css");
 @import url("fonts.css");
+@import url("header.css");
+@import url("body.css");
+@import url("footer.css");
+@import url("root.css");
 
 .cardapio{
+
     columns: 2; /* Define o número de colunas */
-    padding: 8dvh;
+    padding-top: 6dvh;
+    padding-left: 8dvh;
+    padding-right: 8dvh;
+    padding-bottom: 4dvh;
     column-fill: auto; /*Define automaticamente a altura da minha coluna*/   
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
     width: 100%; /* Garante que o contêiner ocupa a largura total */
     height: 110vh; /* Define a altura como 100% da altura da viewport */
     column-span: all;/* Permite rolagem vertical se o conteúdo exceder a altura */
-    border-style: outset;
+    border-style: outset; 
     overflow-y: auto;
+    background: center center no-repeat; /*Garante que meu background fica centralizado ambos os lados e não repita*/
+    background-size: 80dvh;
+    
 }
 
 .tiposComidas h1{
+    font-size: 4dvh;
     text-align: center;
     text-transform: uppercase;
     font-family: 'riverola';
-    
-    
-    font-weight: 400; /* tira o negrito */
+    padding-top: 2dvh;
+    font-weight: 400; /* tira o negrito */    
+}
+
+.comidas h2{
+    text-align: left;
+    font-family: 'riverola';
+    font-size: 3dvh;
+    font-weight: 400;
+    padding-top: 2dvh;
     
 }
 
 .comidas h3{
     text-align: center;
     font-family: 'Century';
-    padding-top: 6dvh;
-    margin-left: 23dvh;
-    margin-right: 23dvh;
+    padding-top: 2dvh;
     font-weight: 700;
 }
 
-.comidas h2{
-    text-align: center;
-    
-    font-family: 'riverola';
-    font-size: 3dvh;
-    font-weight: 400;
-    padding-top: 2dvh;
-    margin: auto;
-}
 
 .comidas p{
-    
     text-align: justify;      
     font-family: 'Century';
-    font-size: 22px;
+    font-size: 2.5dvh;
     font-weight: 700; /* coloca negrito */
-    word-break: normal;
-    margin-left: 23dvh;
-    margin-right: 23dvh;
-    
+    word-break: normal;  
 }
 
-.titulo-chique{
+.title-style{
     color: white;
     padding-left: 50px;
     padding-right: 50px;   
-    background-image: url('/Projeto_FamilysPlace/assets/images/cardapio/nome-estilo.png');
     background-size: cover;
     background-position: center;    
 }
 
-@media (min-width: 767px) {
-    .cardapio h1{
-        margin:auto;
+@media (min-width: 769px) {
+
+    .cardapio{
+        overflow: hidden;
+        column-gap: 50px;
+    }
+
+    .tiposComidas h1{
+        font-size:40px;
+        margin:0;
+    }
+
+    .comidas h2{
+        font-size:30px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .comidas h3{
+        font-size:20px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .comidas p{
+        font-size:25px;
+        text-align: center;
+        margin:0;
     }
     
 
 }
 
 @media (max-width: 768px) {
-    .comidas p{
-        color: blue;      
+
+    .cardapio{
+        column-count: 1;  
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        background: center center;
+        background-repeat: space space;
+        background-size: contain;
     }
     
+    .tiposComidas h1{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        word-break: normal;
+    }
 
+    .comidas h2{
+        word-break: normal;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .comidas h3{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        word-break: normal;
+    }
+
+    .comidas p{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .title-style{
+        width: 100%;
+        height: auto;
+        
+        word-break: normal;
+        
+    }
 }
